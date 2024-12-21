@@ -15,7 +15,11 @@ export default {
       textColor: {
         primary: "#e2e8f0",
         secondary: "#94a3b8",
+        tertiary: "#6c798c",
       },
+      backgroundColor: {
+        tertiary: "#6c798c",
+      }
     },
   },
   plugins: [],
