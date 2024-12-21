@@ -10,7 +10,7 @@
  */
 
 let hasWrapperEl = false;
-let element = hasWrapperEl || document.body;
+let element = hasWrapperEl || window;
 
 let width = window.innerWidth;
 let height = window.innerHeight;
