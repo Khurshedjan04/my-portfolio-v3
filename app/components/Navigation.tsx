@@ -4,37 +4,37 @@ import { useEffect, useState } from "react";
 import { navigationItems } from "../constants";
 
 const Navigation = () => {
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState("about");
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section");
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
+      let activeId = "about";
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      {
-        threshold: 0.8,
-      }
-    );
+      const pageHeight = document.documentElement.scrollHeight;
 
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight * 0.5 && rect.bottom >= 0) {
+          activeId = section.id;
+        }
+        if(window.scrollY + window.innerHeight >= pageHeight - 200){
+          activeId = "cv"
+        }
+      });
+
+      setActiveSection(activeId);
+    };
+
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      sections.forEach((section) => {
-        observer.unobserve(section);
-      });
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <ul className="hidden lg:flex flex-col gap-4 text-secondary mt-24 text-sm font-bold">
+    <ul className="hidden lg:flex flex-col gap-4 text-secondary mb-32 text-sm font-bold">
       {navigationItems.map((item, index) => (
         <li className="group w-fit" key={index}>
           {" "}
