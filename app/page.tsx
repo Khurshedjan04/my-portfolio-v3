@@ -1,5 +1,5 @@
 import About from "./components/About";
-import Contact from "./components/Contact";
+import CV from "./components/CV";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 
@@ -9,7 +9,7 @@ export default function Home() {
       <About/>
       <Skills/>
       <Projects/>
-      <Contact/>
+      <CV/>
     </div>
   );
 }
