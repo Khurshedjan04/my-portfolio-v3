@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Sidebar from "./components/Sidebar";
 import CursorEffects from "./components/CursorEffects";
+import Bubble from "./components/Bubble";
 export const metadata: Metadata = {
   title: "Xurshed Alimmamadov",
   description: "Welcome my next app",
@@ -19,6 +20,7 @@ export default function RootLayout({
     <html className="scroll-smooth" lang="en">
       <body className="bg-slate-900">
         <CursorEffects />
+        <Bubble/>
         <div className="max-w-screen-xl mx-auto">
           <div
             className="w-full flex flex-col  gap-16 px-6 py-12

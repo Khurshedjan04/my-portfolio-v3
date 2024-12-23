@@ -1,10 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import {
-  startBubbling,
-  onTouchMove,
-  onWindowResize,
-} from "../utility/bubble";
 
 const CursorEffects = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -17,15 +12,12 @@ const CursorEffects = () => {
   };
 
   useEffect(() => {
-    startBubbling();
+
 
     window.addEventListener("mousemove", onMouseMove);
 
     return () => {
       window.removeEventListener("mousemove", onMouseMove);
-      window.removeEventListener("touchmove", onTouchMove);
-      window.removeEventListener("touchstart", onTouchMove);
-      window.removeEventListener("resize", onWindowResize);
     };
   }, []);
 

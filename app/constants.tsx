@@ -3,7 +3,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
+import { IconDefinition, library } from "@fortawesome/fontawesome-svg-core";
 import { faReact } from "@fortawesome/free-brands-svg-icons";
 library.add(faReact);
 import { faJs } from "@fortawesome/free-brands-svg-icons";
@@ -17,6 +17,7 @@ import Tailwind from "./svg/Tailwind";
 import HTMLicon from "./svg/HTML";
 import CPPlusIcon from "./svg/CppIcon";
 import TypeScript from "./svg/TypeScript";
+import React from "react";
 
 const mainItems: { name: string; title: string; description: string } = {
   name: "Xurshed Alimmamadov",
@@ -66,8 +67,8 @@ const socialItems: SocialItems[] = [
 ];
 
 interface SkillItem {
-  icon: JSX.Element;
-  subIcon: any;
+  icon: React.ElementType;
+  subIcon: string | IconDefinition;
   title: string;
   description: string;
 }

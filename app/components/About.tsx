@@ -23,10 +23,10 @@ const About = () => {
         </span>
         <span className="hidden lg:block">
           Starting with self-study through free online platforms, I am now
-          pursuing a fully funded Bachelor's degree in{" "}
+          pursuing a fully funded Bachelor&apos;s degree in{" "}
           <strong className="text-primary">IT</strong> at{" "}
           <strong className="text-primary">PDP University</strong>, one of
-          Central Asia's leading institutions. This experience continues to
+          Central Asia&apos;s leading institutions. This experience continues to
           enhance my technical expertise and problem-solving skills. Being
           multilingual in <strong className="text-primary">Uzbek</strong>,{" "}
           <strong className="text-primary">English</strong>,{" "}
