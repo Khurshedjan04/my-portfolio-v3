@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { navigationItems } from "../constants";
 
 const Navigation = () => {
+
   const [activeSection, setActiveSection] = useState("about");
 
   useEffect(() => {
@@ -18,8 +19,8 @@ const Navigation = () => {
         if (rect.top <= window.innerHeight * 0.5 && rect.bottom >= 0) {
           activeId = section.id;
         }
-        if(window.scrollY + window.innerHeight >= pageHeight - 200){
-          activeId = "cv"
+        if (window.scrollY + window.innerHeight >= pageHeight - 200) {
+          activeId = "cv";
         }
       });
 

@@ -9,7 +9,7 @@ import {
 const CursorEffects = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
-  const onMouseMove = (e : any) => {
+  const onMouseMove = (e: MouseEvent) => {
     setMousePos({
       x: e.clientX, 
       y: e.clientY, 

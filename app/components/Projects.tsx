@@ -4,14 +4,14 @@ import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
 const Projects = () => {
   return (
-    <section id="projects" className="flex flex-col gap-12">
+    <section id="projects" className="flex flex-col transition-all hover:opacity-80">
       <h1 className=" bg-[rgb(225,225,225,0.2)] text-primary  transition-all">
         Projects
       </h1>
       {projectsItems.map((item, index) => (
-        <div key={index} className="group">
+        <div key={index} className="group my-6 peer transition-all hover:opacity-100">
           <a target="_blank" href={item.link}>
-            <div className="flex my-4 p-4 transition-all group-hover:opacity-70 hover:!opacity-100  hover:bg-[rgb(225,225,225,0.1)]">
+            <div className="flex my-4 p-4 transition-all rounded-lg group-hover:opacity-70 hover:!opacity-100  hover:bg-[rgb(225,225,225,0.1)]">
               <div className="flex"></div>
               <div className="flex flex-col gap-5 w-1/4 mr-6 ">
                 <Image
@@ -40,9 +40,16 @@ const Projects = () => {
                     <ArrowOutwardIcon fontSize="inherit" />
                   </span>
                 </div>
-                <article className="flex-2 text-sm text-secondary">
+                <article className="flex-2 text-sm group-hover:text-primary transition-all text-secondary">
                   {item.description}
                 </article>
+                <div className="flex gap-2 mt-3">
+                   {item.skills.map((skill, index) => (
+                     <span key={index} className="rounded-xl text-xs bg-teal-900 px-1 py-0.5 text-teal-300">
+                         {skill}
+                     </span>
+                   ))}
+                </div>
               </div>
             </div>
           </a>

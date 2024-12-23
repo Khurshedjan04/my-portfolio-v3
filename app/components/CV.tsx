@@ -29,7 +29,7 @@ const CV = () => {
                     <ArrowOutwardIcon fontSize="inherit" />
                   </span>
                 </div>
-                <article className="flex-2 text-sm text-secondary">
+                <article className="flex-2 text-sm text-secondary group-hover:text-primary transition-all">
                 Explore my CV to see how my skills and projects align with your goals!
                 </article>
               </div>

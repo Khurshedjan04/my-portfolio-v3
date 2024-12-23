@@ -52,7 +52,7 @@ function bindEvents() {
   window.addEventListener("resize", onWindowResize);
 }
 
-function onWindowResize(e) {
+function onWindowResize() {
   width = window.innerWidth;
   height = window.innerHeight;
 

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { mainItems, socialItems } from "../constants";
 import Navigation from "./Navigation";
 
@@ -6,7 +7,7 @@ const Sidebar = () => {
     <header className=" w-full lg:h-screen flex flex-col gap-10 lg:flex-1 lg:gap-5 lg:justify-between lg:sticky top-0 lg:py-24">
       <div>
         <h1 className="text-primary text-4xl font-bold tracking-tight sm:text-5xl">
-          <a href="/">{mainItems.name}</a>
+          <Link href={"/"}>{mainItems.name}</Link>
         </h1>
         <h2 className="text-primary mt-3 text-lg tracking-tight sm:text-xl">
           {mainItems.title}
