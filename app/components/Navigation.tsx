@@ -8,6 +8,7 @@ const Navigation = () => {
   const [activeSection, setActiveSection] = useState("about");
 
   useEffect(() => {
+    // Setting active section
     const handleScroll = () => {
       const sections = document.querySelectorAll("section");
       let activeId = "about";
@@ -26,6 +27,12 @@ const Navigation = () => {
 
       setActiveSection(activeId);
     };
+    // Scrolling into skills on load
+    const targetElement = document.getElementById('skills');
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+
 
     window.addEventListener("scroll", handleScroll);
 

@@ -3,8 +3,8 @@ import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
 const CV = () => {
   return (
-    <section id="cv" className="flex flex-col gap-12">
-      <h1 className=" bg-[rgb(225,225,225,0.2)] text-primary  transition-all">
+    <section id="cv" className="flex flex-col pb-24 gap-12">
+      <h1 className="text-2xl text-primary  transition-all">
         CV
       </h1>
         <div className="group">

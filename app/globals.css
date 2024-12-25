@@ -8,5 +8,9 @@ body {
   font-family: "Quantico", serif;
   font-weight: 100;
   font-style: normal;
-
+}
+@media screen and (max-width: 30em) {
+  html {
+    font-size: 75%;
+  }
 }

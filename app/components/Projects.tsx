@@ -5,7 +5,7 @@ import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 const Projects = () => {
   return (
     <section id="projects" className="flex flex-col transition-all hover:opacity-80">
-      <h1 className=" bg-[rgb(225,225,225,0.2)] text-primary  transition-all">
+      <h1 className="text-2xl text-primary  transition-all">
         Projects
       </h1>
       {projectsItems.map((item, index) => (

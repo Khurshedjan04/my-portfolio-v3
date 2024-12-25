@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-5 md:gap-7 lg:gap-12 text-secondary">
       <About/>
-      <Projects/>
       <Skills/>
+      <Projects/>
       <CV/>
     </div>
   );

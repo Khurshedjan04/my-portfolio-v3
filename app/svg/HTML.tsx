@@ -1,6 +1,6 @@
 const HTMLicon = () => {
     return (
-      <div className="relative -z-10">
+      <div className="relative h-full w-full -z-10">
         {/* Colors adjusted to a dark tone to keep consistency */}
         <svg
           className="relative z-10"

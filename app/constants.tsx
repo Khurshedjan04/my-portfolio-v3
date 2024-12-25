@@ -31,12 +31,12 @@ const navigationItems = [
     href: "#about",
   },
   {
-    title: "Projects",
-    href: "#projects",
-  },
-  {
     title: "Skills",
     href: "#skills",
+  },
+  {
+    title: "Projects",
+    href: "#projects",
   },
   {
     title: "CV",
@@ -70,7 +70,7 @@ interface SkillItem {
   icon: React.ElementType;
   subIcon: string | IconDefinition;
   title: string;
-  description: string;
+  persentage: number;
 }
 
 const skillsItems: SkillItem[] = [
@@ -78,64 +78,55 @@ const skillsItems: SkillItem[] = [
     icon: HTMLicon,
     subIcon: "",
     title: "HTML5 / CSS3",
-    description:
-      "I started learning web development on my own using resources like W3Schools, and I quickly became passionate about it. As time went on, I mastered HTML and CSS for structuring web content. Now I'm a pro at HTML and CSS, from making responsive layouts to adding custom animations and transitions. They've become second nature to me, and I can use them to make websites that are clean, modern, and mobile-friendly.",
+    persentage: 96,
   },
   {
     icon: FontAwesomeIcon,
     subIcon: faJs,
     title: "JavaScript",
-    description:
-      "From there, I took myself to the next level using structured courses to really get into JavaScript. The next thing I knew, I had mastered JavaScript. Using vanilla JS, I could confidently manipulate the DOM to create interactive elements and deal with complex logic in the background. Whether it was creating dynamic user interfaces or automating tasks, I enjoyed using JavaScript in order to add functionality and make my websites more interactive.",
+    persentage: 92,
   },
   {
     icon: FontAwesomeIcon,
     subIcon: faReact,
     title: "React.JS",
-    description:
-      "After mastering JavaScript, I craved building dynamic web experiences. YouTube and W3Schools became my guides as I started diving into React. React's component-based approach captivated me, while its focus on efficiency kept things smooth. As I continued to learn, I experienced how React's declarative syntax made building interactive user interfaces both intuitive and powerful. Now, React is my go-to tool for creating fast and scalable web applications.",
+    persentage: 86,
   },
   {
     icon: Tailwind,
     subIcon: "",
     title: "Tailwind",
-    description:
-      "Once I got comfortable with React, I started looking for ways to make designing interfaces faster and easier. That's when I came across TailwindCSS, and it completely changed the game for me. Its utility classes made it so simple to build beautiful, responsive designs without writing tons of custom CSS. I love how well it works with React—it's like having a design toolbox right at my fingertips. Tailwind has become my go-to for creating clean and modern UIs effortlessly.",
+    persentage: 88,
   },
   {
     icon: NextJs,
     subIcon: "",
     title: "Next.JS",
-    description:
-      "Building on my experience with React, recently, I've started using Next.js to improve my web development projects. I am making SEO-friendly and scalable apps using Next.js thanks to its robust features like server-side rendering and static site generation. It is my preferred framework for creating production-ready apps, especially, I love using Next.js because of its integrated routing and performance optimization",
+    persentage: 78,
   },
   {
     icon: TypeScript,
     subIcon: "",
     title: "TypeScript",
-    description:
-      "While working with JavaScript, especially on bigger projects with React and Next.js, I ran into issues like bugs from incorrect types and difficulties maintaining code. I realized that TypeScript could solve these problems. By adding static types, TypeScript helped me catch errors early, made my code easier to understand, and improved teamwork. It also made working with larger codebases much smoother, especially when using it alongside React and Next.js.",
+    persentage: 75,
   },
   {
     icon: FontAwesomeIcon,
     subIcon: faGit,
     title: "Version Control",
-    description:
-      "When I started working on projects, I realized how important version control was, especially for keeping track of changes and collaborating with others. I began using Git, which helped me manage my code, create branches, and easily undo mistakes. Platforms like GitHub made it even easier to collaborate, share code, and resolve conflicts when working with others, making the development process much smoother.",
+    persentage: 78,
   },
   {
     icon: FontAwesomeIcon,
     subIcon: faPython,
     title: "Python",
-    description:
-      "I've already started learning Python, and now I'm diving into its libraries. While it may not be essential for my career in frontend development, it's an important step toward my goal of becoming a full-stack developer. Python's versatility and wide range of libraries will be key as I work towards building more complex applications in the future.",
+    persentage: 72,
   },
   {
     icon: CPPlusIcon,
     subIcon: "",
     title: "C++",
-    description:
-      "Along the way, I learned C++ to strengthen my understanding of programming fundamentals. While it's not directly related to my focus on frontend development, it gave me a solid grasp of concepts like memory management and object-oriented programming, which will be valuable as I work toward becoming a full-stack developer.",
+    persentage: 62,
   },
 ];
 
