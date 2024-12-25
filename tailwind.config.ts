@@ -22,5 +22,10 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant } : {addVariant: any}) {
+      addVariant('supports-hover', '@media (hover: hover) and (pointer: fine)');
+    },
+
+  ],
 } satisfies Config;

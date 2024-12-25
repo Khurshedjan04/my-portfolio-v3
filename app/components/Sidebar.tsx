@@ -17,7 +17,7 @@ const Sidebar = () => {
       <Navigation />
       <ul className="flex gap-5 text-secondary relative bottom-0">
         {socialItems.map((item, index) => (
-          <li key={index} className="cursor-pointer transition-all hover:text-primary text-2xl lg:text-3xl">
+          <li key={index} className="cursor-pointer transition-all supports-hover:hover:text-primary text-2xl lg:text-3xl">
             <a href={item.link} target="_blank">
               {" "}
               <item.icon fontSize="inherit" />{" "}

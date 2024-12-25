@@ -6,7 +6,7 @@ const Skills = () => {
         <h1 className="text-2xl text-primary text-left">Skills</h1>
         <div className="w-full flex flex-col">
           {skillsItems.map((item, index) => (
-            <div key={index} className="my-4 p-4 rounded-lg transition-all group-hover:opacity-70 hover:!opacity-100  hover:bg-[rgb(225,225,225,0.1)]">
+            <div key={index} className="my-4 p-4 rounded-lg transition-all supports-hover:group-hover:opacity-70 supports-hover:hover:!opacity-100  supports-hover:hover:bg-[rgb(225,225,225,0.1)]">
               <div className="flex mb-1">
                 <div className="w-6 h-6 text-3xl mr-6 flex items-center text-primary">
                   {item.subIcon !== "" ? (

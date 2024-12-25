@@ -12,7 +12,7 @@ const CursorEffects = () => {
   };
 
   const onTouchMove = (e: TouchEvent) => {
-    const touch = e.touches[0]; 
+    const touch = e.touches[0];
     setMousePos({
       x: touch.clientX,
       y: touch.clientY,
@@ -21,21 +21,13 @@ const CursorEffects = () => {
 
   useEffect(() => {
     window.addEventListener("mousemove", onMouseMove);
-    window.addEventListener("touchmove", onTouchMove);
-    window.addEventListener("touchstart", onTouchMove);
+    window.addEventListener("touchmove", onTouchMove, { passive: false });
+    window.addEventListener("touchstart", onTouchMove, { passive: false });
 
     return () => {
       window.removeEventListener("mousemove", onMouseMove);
       window.removeEventListener("touchmove", onTouchMove);
       window.removeEventListener("touchstart", onTouchMove);
-    };
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener("mousemove", onMouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", onMouseMove);
     };
   }, []);
 
