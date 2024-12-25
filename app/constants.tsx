@@ -31,12 +31,12 @@ const navigationItems = [
     href: "#about",
   },
   {
-    title: "Skills",
-    href: "#skills",
-  },
-  {
     title: "Projects",
     href: "#projects",
+  },
+  {
+    title: "Skills",
+    href: "#skills",
   },
   {
     title: "CV",
