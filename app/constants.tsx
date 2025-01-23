@@ -141,11 +141,28 @@ interface ProjectItem {
 
 const projectsItems: ProjectItem[] = [
   {
+    imgSrc: "/assets/workhub.png",
+    imgSrc2: "/assets/wokrhub.png",
+    title: "WorkHub Central",
+    link: "https://coworking-workhub.vercel.app/",
+    description:
+      "WoroHub Central - a platform for coworking spaces. For this project, I built a responsive, minimalistic website, WorkHub Central, using Next.js and Tailwind CSS. It features smooth animations (AOS), carousels, and is fully responsive for any screen sizes. This project enhanced my frontend skills with Next.JS and Tailwind.",
+    skills: [
+      "Next.js",
+      "Tailwind",
+      "TypeScript",
+      "JavaScript",
+      "AOS",
+      "React Slick",
+    ],
+  },
+  {
     imgSrc: "/assets/natours.png",
     imgSrc2: "",
     title: "Natours",
     link: "https://clone-natours-alimmamadov.vercel.app/",
-    description: "For this project, I built a responsive tourism website, Natours, using React.js (with Vite) and Tailwind CSS. It features smooth animations, interactive elements like carousels, and is fully optimized for different screen sizes. This project enhanced my frontend skills with React, Vite, and Tailwind.",
+    description:
+      "For this project, I built a responsive tourism website, Natours, using React.js (with Vite) and Tailwind CSS. It features smooth animations, interactive elements like carousels, and is fully optimized for different screen sizes. This project enhanced my frontend skills with React, Vite, and Tailwind.",
     skills: ["React", "Vite", "Tailwind", "JavaScript"],
   },
   {
@@ -153,16 +170,17 @@ const projectsItems: ProjectItem[] = [
     imgSrc2: "/assets/shopcy2.png",
     title: "Shopsy",
     link: "https://online-shop-clothes-alimmamadov.vercel.app/",
-    description: "For the Shopsy project, I built a fully responsive e-commerce site for selling clothes, featuring a dark mode toggle. I used React.js with Vite for fast development and Tailwind CSS for styling. The site includes smooth animations with AOS, image carousels with React Slick, and various interactive UI elements.",
+    description:
+      "For the Shopsy project, I built a fully responsive e-commerce site for selling clothes, featuring a dark mode toggle. I used React.js with Vite for fast development and Tailwind CSS for styling. The site includes smooth animations with AOS, image carousels with React Slick, and various interactive UI elements.",
     skills: ["React", "Vite", "Tailwind", "JavaScript", "React Slick", "AOS"],
-
   },
   {
     imgSrc: "/assets/virtualR.png",
     imgSrc2: "",
     title: "VirtualR",
     link: "https://virtual-r-alimmamadov.vercel.app/",
-    description: "For the VirtualR project, I developed a responsive website with React.js and Vite for fast development. The design is fully responsive and optimized for all screen sizes. I used Tailwind CSS for styling and incorporated Lucide-react for high-quality icons, enhancing the UI with a modern, clean look.",
+    description:
+      "For the VirtualR project, I developed a responsive website with React.js and Vite for fast development. The design is fully responsive and optimized for all screen sizes. I used Tailwind CSS for styling and incorporated Lucide-react for high-quality icons, enhancing the UI with a modern, clean look.",
     skills: ["React", "Vite", "Tailwind", "JavaScript", "Lucide-react"],
   },
   {
@@ -170,7 +188,8 @@ const projectsItems: ProjectItem[] = [
     imgSrc2: "/assets/calculator2.png",
     title: "Calculator",
     link: "https://calculator-react-red.vercel.app/",
-    description: "For this project, I built a React Calculator that supports both click and keydown events for a seamless user experience. The calculator features a clean and modern design with smooth animations and two modes: dark and light. I used React for the functionality, along with Material UI for stylish components, and Tailwind CSS for responsive styling.",
+    description:
+      "For this project, I built a React Calculator that supports both click and keydown events for a seamless user experience. The calculator features a clean and modern design with smooth animations and two modes: dark and light. I used React for the functionality, along with Material UI for stylish components, and Tailwind CSS for responsive styling.",
     skills: ["React", "Vite", "Tailwind", "JavaScript"],
   },
   {
@@ -178,7 +197,8 @@ const projectsItems: ProjectItem[] = [
     imgSrc2: "/assets/timer2.png",
     title: "Clockwise",
     link: "https://alimmamadov-project-timer.vercel.app/",
-    description: "I built a Timer using pure HTML, CSS, and vanilla JavaScript. The project features a simple, intuitive design with 2 versions: simple and circular modes, with functionality to start, stop, cencel and reset the timer. It was a great exercise in working with core web technologies to create a clean and interactive user experience without relying on frameworks or libraries.",
+    description:
+      "I built a Timer using pure HTML, CSS, and vanilla JavaScript. The project features a simple, intuitive design with 2 versions: simple and circular modes, with functionality to start, stop, cencel and reset the timer. It was a great exercise in working with core web technologies to create a clean and interactive user experience without relying on frameworks or libraries.",
     skills: ["HTML", "CSS", "JavaScript"],
   },
 ];
