@@ -193,13 +193,13 @@ const projectsItems: ProjectItem[] = [
     skills: ["React", "Vite", "Tailwind", "JavaScript"],
   },
   {
-    imgSrc: "/assets/timer.png",
-    imgSrc2: "/assets/timer2.png",
-    title: "Clockwise",
-    link: "https://alimmamadov-project-timer.vercel.app/",
+    imgSrc: "/assets/currencyExchange.png",
+    imgSrc2: "",
+    title: "Currency Exchange App",
+    link: "https://currency-exchange-app-nine.vercel.app/",
     description:
-      "I built a Timer using pure HTML, CSS, and vanilla JavaScript. The project features a simple, intuitive design with 2 versions: simple and circular modes, with functionality to start, stop, cencel and reset the timer. It was a great exercise in working with core web technologies to create a clean and interactive user experience without relying on frameworks or libraries.",
-    skills: ["HTML", "CSS", "JavaScript"],
+      "For this project, I built a React Exchange app integrating real time currency exchange rates API. The app features a clean and modern design. I used React for the functionality, and Tailwind CSS for responsive styling.",
+    skills: ["React", "Vite", "Tailwind", "JavaScript", "Rest API"],
   },
 ];
 
