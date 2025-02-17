@@ -184,15 +184,6 @@ const projectsItems: ProjectItem[] = [
     skills: ["React", "Vite", "Tailwind", "JavaScript", "Lucide-react"],
   },
   {
-    imgSrc: "/assets/calculator1.png",
-    imgSrc2: "/assets/calculator2.png",
-    title: "Calculator",
-    link: "https://calculator-react-red.vercel.app/",
-    description:
-      "For this project, I built a React Calculator that supports both click and keydown events for a seamless user experience. The calculator features a clean and modern design with smooth animations and two modes: dark and light. I used React for the functionality, along with Material UI for stylish components, and Tailwind CSS for responsive styling.",
-    skills: ["React", "Vite", "Tailwind", "JavaScript"],
-  },
-  {
     imgSrc: "/assets/currencyExchange.png",
     imgSrc2: "",
     title: "Currency Exchange App",
@@ -200,6 +191,15 @@ const projectsItems: ProjectItem[] = [
     description:
       "For this project, I built a React Exchange app integrating real time currency exchange rates API. The app features a clean and modern design. I used React for the functionality, and Tailwind CSS for responsive styling.",
     skills: ["React", "Vite", "Tailwind", "JavaScript", "Rest API"],
+  },
+  {
+    imgSrc: "/assets/calculator1.png",
+    imgSrc2: "/assets/calculator2.png",
+    title: "Calculator",
+    link: "https://calculator-react-red.vercel.app/",
+    description:
+      "For this project, I built a React Calculator that supports both click and keydown events for a seamless user experience. The calculator features a clean and modern design with smooth animations and two modes: dark and light. I used React for the functionality, along with Material UI for stylish components, and Tailwind CSS for responsive styling.",
+    skills: ["React", "Vite", "Tailwind", "JavaScript"],
   },
 ];
 
