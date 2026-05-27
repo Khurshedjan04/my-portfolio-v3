@@ -2,28 +2,30 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconDefinition, library } from "@fortawesome/fontawesome-svg-core";
-import { faReact } from "@fortawesome/free-brands-svg-icons";
-library.add(faReact);
-import { faJs } from "@fortawesome/free-brands-svg-icons";
-library.add(faJs);
-import { faPython } from "@fortawesome/free-brands-svg-icons";
-library.add(faPython);
-import { faGit } from "@fortawesome/free-brands-svg-icons";
-library.add(faGit);
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import NextJs from "@/app/svg/Next";
 import Tailwind from "./svg/Tailwind";
-import HTMLicon from "./svg/HTML";
-import CPPlusIcon from "./svg/CppIcon";
+import SQL from "./svg/SQL";
 import TypeScript from "./svg/TypeScript";
-import React from "react";
+import CSHarp from "./svg/CSHARP";
+import JavaScriptIcon from "./svg/JavaScript";
+import PythonIcon from "./svg/Python";
+import DotNet from "./svg/DotNet";
+import NodeJsIcon from "./svg/NodeJS";
+import RestAPIIcon from "./svg/RestAPI";
+import ReactIcon from "./svg/ReactIcon";
+import VersionControl from "./svg/VersionControl";
+import FigmaIcon from "./svg/FigmaIcon";
+import PostgresSQL from "./svg/PostgresSQL";
+import MySQL from "./svg/MySQL";
+import MongoDB from "./svg/MongoDb";
+import CICD from "./svg/CICD";
+import Cloud from "./svg/Cloud";
+import LeetCodeIcon from "./svg/LeetCode";
 
-const mainItems: { name: string; title: string; description: string } = {
+const mainItems: { name: string; title: string } = {
   name: "Xurshed Alimmamadov",
-  title: "Front End Developer",
-  description:
-    "I build clean, visually appealing websites, continuously striving to improve and grow in the web.",
+  title: "Software Engineer",
 };
 const navigationItems = [
   {
@@ -44,7 +46,7 @@ const navigationItems = [
   },
 ];
 interface SocialItems {
-  icon: typeof InstagramIcon;
+  icon: any;
   link: string;
 }
 const socialItems: SocialItems[] = [
@@ -53,8 +55,16 @@ const socialItems: SocialItems[] = [
     link: "https://github.com/Khurshedjan04",
   },
   {
+    icon: LeetCodeIcon,
+    link: "https://leetcode.com/u/alimmamadovxurshid04",
+  },
+  {
+    icon: LinkedInIcon,
+    link: "https://www.linkedin.com/in/khurshed-alimmamadov",
+  },
+  {
     icon: InstagramIcon,
-    link: "https://www.instagram.com/khurshedjan_12.06/",
+    link: "https://www.instagram.com/khurshedjan_12.06",
   },
   {
     icon: TelegramIcon,
@@ -67,66 +77,151 @@ const socialItems: SocialItems[] = [
 ];
 
 interface SkillItem {
-  icon: React.ElementType;
-  subIcon: string | IconDefinition;
+  icon: any;
   title: string;
   persentage: number;
 }
 
-const skillsItems: SkillItem[] = [
+interface SkillGroup {
+  categoryTitle: string;
+  skills: SkillItem[];
+}
+
+const skillsGroups: SkillGroup[] = [
   {
-    icon: HTMLicon,
-    subIcon: "",
-    title: "HTML5 / CSS3",
-    persentage: 96,
+    categoryTitle: "Languages",
+    skills: [
+      {
+        icon: CSHarp,
+        title: "C#",
+        persentage: 86,
+      },
+      {
+        icon: SQL,
+        title: "SQL",
+        persentage: 80,
+      },
+      {
+        icon: JavaScriptIcon,
+        title: "JavaScript",
+        persentage: 92,
+      },
+      {
+        icon: TypeScript,
+        title: "TypeScript",
+        persentage: 73,
+      },
+      {
+        icon: PythonIcon,
+        title: "Python",
+        persentage: 78,
+      },
+    ],
   },
   {
-    icon: FontAwesomeIcon,
-    subIcon: faJs,
-    title: "JavaScript",
-    persentage: 92,
+    categoryTitle: "Backend",
+    skills: [
+      {
+        icon: DotNet,
+        title: ".NET",
+        persentage: 86,
+      },
+      {
+        icon: NodeJsIcon,
+        title: "Node.JS",
+        persentage: 78,
+      },
+      {
+        icon: RestAPIIcon,
+        title: "REST APIs",
+        persentage: 73,
+      },
+    ],
   },
   {
-    icon: FontAwesomeIcon,
-    subIcon: faReact,
-    title: "React.JS",
-    persentage: 86,
+    categoryTitle: "Database Design",
+    skills: [
+      {
+        icon: PostgresSQL,
+        title: "PostgresSQL",
+        persentage: 88,
+      },
+      {
+        icon: MySQL,
+        title: "MySQl",
+        persentage: 78,
+      },
+      {
+        icon: MongoDB,
+        title: "MongoDB",
+        persentage: 86,
+      },
+    ],
   },
   {
-    icon: Tailwind,
-    subIcon: "",
-    title: "Tailwind",
-    persentage: 88,
+    categoryTitle: "Frontend",
+    skills: [
+      {
+        icon: NextJs,
+        title: "Next.JS",
+        persentage: 86,
+      },
+      {
+        icon: ReactIcon,
+        title: "React",
+        persentage: 74,
+      },
+      {
+        icon: Tailwind,
+        title: "Tailwind",
+        persentage: 88,
+      },
+      {
+        icon: FigmaIcon,
+        title: "Figma",
+        persentage: 68,
+      },
+    ],
   },
   {
-    icon: NextJs,
-    subIcon: "",
-    title: "Next.JS",
-    persentage: 78,
+    categoryTitle: "System Design",
+    skills: [
+      {
+        icon: "SD",
+        title: "Software Engineering (HLD/LLD)",
+        persentage: 80,
+      },
+      {
+        icon: "MD",
+        title: "UML / ERD Modeling",
+        persentage: 82,
+      },
+      {
+        icon: "SDLC",
+        title: "Sofware Development Life Cycle",
+        persentage: 78,
+      },
+    ],
   },
   {
-    icon: TypeScript,
-    subIcon: "",
-    title: "TypeScript",
-    persentage: 75,
-  },
-  {
-    icon: FontAwesomeIcon,
-    subIcon: faGit,
-    title: "Version Control",
-    persentage: 78,
-  },
-  {
-    icon: FontAwesomeIcon,
-    subIcon: faPython,
-    title: "Python",
-    persentage: 72,
-  },
-  {
-    icon: CPPlusIcon,
-    subIcon: "",
-    title: "C++",
-    persentage: 62,
+    categoryTitle: "DevOPS",
+    skills: [
+      {
+        icon: VersionControl,
+        title: "Version Control",
+        persentage: 82,
+      },
+      {
+        icon: CICD,
+        title: "CI & CD",
+        persentage: 78,
+      },
+      {
+        icon: Cloud,
+        title: "Cloud & Deployment",
+        persentage: 78,
+      },
+    ],
   },
 ];
 
@@ -203,4 +298,4 @@ const projectsItems: ProjectItem[] = [
   },
 ];
 
-export { mainItems, navigationItems, socialItems, skillsItems, projectsItems };
+export { mainItems, navigationItems, socialItems, skillsGroups, projectsItems };

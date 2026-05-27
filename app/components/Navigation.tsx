@@ -4,68 +4,68 @@ import { useEffect, useState } from "react";
 import { navigationItems } from "../constants";
 
 const Navigation = () => {
-
   const [activeSection, setActiveSection] = useState("about");
 
   useEffect(() => {
-    // Setting active section
     const handleScroll = () => {
       const sections = document.querySelectorAll("section");
+      const pageBottom = document.documentElement.scrollHeight;
       let activeId = "about";
-
-      const pageHeight = document.documentElement.scrollHeight;
 
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
         if (rect.top <= window.innerHeight * 0.5 && rect.bottom >= 0) {
           activeId = section.id;
         }
-        if (window.scrollY + window.innerHeight >= pageHeight - 200) {
-          activeId = "cv";
-        }
       });
+
+      if (window.scrollY + window.innerHeight >= pageBottom - 200) {
+        activeId = "cv";
+      }
 
       setActiveSection(activeId);
     };
-    // Scrolling into skills on load
-    const targetElement = document.getElementById('skills');
+
+    const targetElement = document.getElementById("skills");
     if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
+      targetElement.scrollIntoView({ behavior: "smooth" });
     }
 
-
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <ul className="hidden lg:flex flex-col gap-4 text-secondary mb-32 text-sm font-bold">
-      {navigationItems.map((item, index) => (
-        <li className="group w-fit" key={index}>
-          {" "}
-          <a
-            href={item.href}
-            className={`transition-all flex items-center gap-2 group-hover:text-primary ${
-              "#" + activeSection === item.href
-                ? "text-primary"
-                : "text-secondary"
-            }`}
-          >
-            <span
-              className={` transition-all h-[1px] block group-hover:bg-slate-200 group-hover:!w-16  ${
-                "#" + activeSection === item.href
-                  ? "bg-slate-200 !w-16"
-                  : "bg-slate-400 w-8"
-              }`}
-            ></span>
-            <span>{item.title}</span>
-          </a>
-        </li>
-      ))}
+    <ul className="hidden lg:flex flex-col gap-0.5 pb-16">
+      {navigationItems.map((item, index) => {
+        const isActive = "#" + activeSection === item.href;
+        return (
+          <li key={index} className="group w-fit pr-5">
+            <a href={item.href} className="flex items-center gap-3 py-1.5 w-fit pr-5">
+              <span
+                className={`block h-px flex-shrink-0 transition-all duration-200
+                  ${
+                    isActive
+                      ? "w-7 bg-primary"
+                      : "w-[18px] bg-slate-600 group-hover:w-7 group-hover:bg-primary"
+                  }`}
+              />
+              <span
+                className={`font-mono text-[11px] tracking-[0.14em] uppercase transition-colors duration-200
+                  ${
+                    isActive
+                      ? "text-primary"
+                      : "text-tertiary group-hover:text-primary"
+                  }`}
+              >
+                {item.title}
+              </span>
+            </a>
+          </li>
+        );
+      })}
     </ul>
   );
 };
+
 export default Navigation;

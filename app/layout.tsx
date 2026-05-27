@@ -72,7 +72,7 @@ export default function RootLayout({
             md:px-12 md:py-16 lg:py-0 lg:flex-row lg:justify-between lg:gap:4"
           >
             <Sidebar />
-            <main className="flex-1 text-balance">{children}</main>
+            <main className="flex-1">{children}</main>
           </div>
         </div>
       </body>

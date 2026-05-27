@@ -33,7 +33,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "app/components/Bubble.jsx"  ],
+, "app/components/Bubble.tsx"  ],
   "exclude": [
     "node_modules"
   ]

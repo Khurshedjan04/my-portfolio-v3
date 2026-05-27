@@ -4,69 +4,116 @@ import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
 const Projects = () => {
   return (
-    <section id="projects" className="flex flex-col transition-all hover:opacity-80">
-      <h1 className="text-2xl text-primary  transition-all">
-        Projects
-      </h1>
-      {projectsItems.map((item, index) => (
-        <div key={index} className="group my-6 peer transition-all hover:opacity-100">
-          <a target="_blank" href={item.link}>
-            <div className="flex my-4 p-4 transition-all rounded-lg supports-hover:group-hover:opacity-70 supports-hover:hover:!opacity-100  supports-hover:hover:bg-[rgb(225,225,225,0.1)]">
-              <div className="flex"></div>
-              <div className="flex flex-col gap-5 w-1/4 mr-6 ">
-                <Image
-                  className="transition-all outline supports-hover:group-hover:outline-teal-500 supports-hover:group-hover:outline-2 supports-hover:group-hover:outline-offset-1"
-                  src={item.imgSrc}
-                  alt="Natours"
-                  width={500}
-                  height={500}
-                />
-                {item.imgSrc2 && (
+    <section id="projects" className="flex flex-col py-8">
+      <div className="flex items-baseline gap-4 mb-8">
+        <h1
+          className="text-2xl text-primary italic"
+          style={{ fontFamily: "Georgia, serif" }}
+        >
+          Projects
+        </h1>
+        <div className="flex-1 h-px bg-[rgba(69,173,217,0.2)]" />
+      </div>
+      <div className="flex flex-col">
+        {projectsItems.map((item, index) => (
+          <div key={index}>
+            {index > 0 && <div className="h-px bg-white/[0.04] my-0.5" />}
+            <a
+              target="_blank"
+              href={item.link}
+              className="group block rounded-xl border border-transparent px-5 py-4
+                hover:bg-[rgba(69,173,217,0.05)] hover:border-[rgba(69,173,217,0.2)]
+                transition-all duration-200"
+            >
+              <div className="flex gap-5 items-start">
+                <div className="flex-shrink-0 w-[110px] flex flex-col gap-2">
                   <Image
-                    className="transition-all outline supports-hover:group-hover:outline-teal-500 supports-hover:group-hover:outline-2 supports-hover:group-hover:outline-offset-1"
-                    src={item.imgSrc2}
+                    src={item.imgSrc}
                     alt={item.title}
                     width={500}
                     height={500}
+                    className="w-full rounded-md object-cover
+                      outline outline-1 outline-white/[0.07] outline-offset-0
+                      group-hover:outline-2 group-hover:outline-[rgba(69,173,217,0.45)]
+                      group-hover:outline-offset-[2px] transition-all duration-75"
                   />
-                )}
-              </div>
-              <div className="flex-1">
-                <div className="mb-3 flex">
-                  <h1 className="text-primary text-2xl transition-all supports-hover:group-hover:text-teal-500">
-                    {item.title}
-                  </h1>
-                  <span className="text-primary transition-all text-base ml-3 -translate-x-[0.32rem] translate-y-[0.32rem] supports-hover:group-hover:translate-x-0 supports-hover:group-hover:-translate-y-0 supports-hover:group-hover:text-teal-500">
-                    <ArrowOutwardIcon fontSize="inherit" />
-                  </span>
+                  {item.imgSrc2 && (
+                    <Image
+                      src={item.imgSrc2}
+                      alt={item.title}
+                      width={500}
+                      height={500}
+                      className="w-full rounded-md object-cover
+                        outline outline-1 outline-white/[0.07] outline-offset-0
+                        group-hover:outline-2 group-hover:outline-[rgba(69,173,217,0.45)]
+                        group-hover:outline-offset-[2px] transition-all duration-75"
+                    />
+                  )}
                 </div>
-                <article className="flex-2 text-sm supports-hover:group-hover:text-primary transition-all text-secondary">
-                  {item.description}
-                </article>
-                <div className="flex flex-wrap gap-2 mt-3">
-                   {item.skills.map((skill, index) => (
-                     <span key={index} className="rounded-xl text-xs bg-teal-900 px-1 py-0.5 text-teal-300">
-                         {skill}
-                     </span>
-                   ))}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-1.5 mb-2">
+                    <h2
+                      className="text-[17px] font-semibold text-primary italic
+                        group-hover:text-[#45add9] transition-colors duration-200"
+                      style={{ fontFamily: "Georgia, serif" }}
+                    >
+                      {item.title}
+                    </h2>
+                    <span
+                      className="text-secondary text-sm mt-0.5
+                        group-hover:translate-x-0.5 group-hover:-translate-y-0.5
+                        group-hover:text-[#45add9] transition-all duration-200"
+                    >
+                      <ArrowOutwardIcon fontSize="inherit" />
+                    </span>
+                  </div>
+                  <p
+                    className="text-[12.5px] leading-relaxed text-secondary
+                    group-hover:text-primary transition-colors duration-200 mb-3"
+                  >
+                    {item.description}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {item.skills.map((skill, si) => (
+                      <span
+                        key={si}
+                        className="font-mono text-[10.5px] text-sky-300 tracking-wide
+                          bg-[rgba(69,173,217,0.08)] border border-[rgba(69,173,217,0.18)]
+                          rounded-full px-2.5 py-0.5
+                          group-hover:bg-[rgba(69,173,217,0.18)]
+                          group-hover:border-[rgba(69,173,217,0.35)]
+                          transition-all duration-200"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          </a>
-        </div>
-      ))}
-      <a target="_blank" href="https://github.com/Khurshedjan04" className="mb-3 flex group relative w-fit
-        before:content-[''] before:transition-all before:absolute before:-bottom-1 before:h-0.5 before:w-0 before:bg-teal-500 supports-hover:hover:before:w-1/2 supports-hover:hover:before:z-[1] before:left-1/2
-        after:content-[''] after:transition-all after:absolute after:-bottom-1 after:h-0.5 after:w-0 after:bg-teal-500 supports-hover:hover:after:w-1/2 hover:after:z-[1] after:right-1/2
-      ">
-        <h1 className="text-primary text-2xl transition-all ">
+            </a>
+          </div>
+        ))}
+      </div>
+      <a
+        target="_blank"
+        href="https://github.com/Khurshedjan04"
+        className="group relative mt-6 mb-2 w-fit inline-flex items-center gap-2 pb-0.5
+          before:absolute before:bottom-0 before:left-1/2 before:right-1/2 before:h-[1.5px]
+          before:bg-[#45add9] before:transition-all before:duration-250
+          hover:before:left-0 hover:before:right-0"
+      >
+        <span
+          className="text-secondary text-lg italic group-hover:text-primary transition-colors duration-200"
+          style={{ fontFamily: "Georgia, serif" }}
+        >
           Visit GitHub to see all projects
-        </h1>
-        <span className="text-primary transition-all text-base ml-3 -translate-x-[0.32rem] translate-y-[0.32rem] supports-hover:group-hover:translate-x-0 supports-hover:group-hover:-translate-y-0 supports-hover:group-hover:text-teal-500">
+        </span>
+        <span className="text-secondary text-sm group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#45add9] transition-all duration-200">
           <ArrowOutwardIcon fontSize="inherit" />
         </span>
       </a>
     </section>
   );
 };
+
 export default Projects;

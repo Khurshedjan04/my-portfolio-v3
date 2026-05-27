@@ -1,90 +1,83 @@
-import { skillsItems } from "../constants";
-const Skills = () => {
-  return (
-    <section id="skills">
-      <div className="w-full">
-        <h1 className="text-2xl text-primary text-left">Skills</h1>
-        <div className="w-full flex flex-col">
-          {skillsItems.map((item, index) => (
-            <div key={index} className="my-4 p-4 rounded-lg transition-all supports-hover:group-hover:opacity-70 supports-hover:hover:!opacity-100  supports-hover:hover:bg-[rgb(225,225,225,0.1)]">
-              <div className="flex mb-1">
-                <div className="w-6 h-6 text-3xl mr-6 flex items-center text-primary">
-                  {item.subIcon !== "" ? (
-                    <item.icon
-                      icon={item.subIcon}
-                      style={{ width: "100%", height: "100%" }}
-                    />
-                  ) : (
-                    <item.icon />
-                  )}
-                </div>
-                <div className="flex-1">
-                  <h1 className="mb-3 text-primary">{item.title}</h1>
-                </div>
-              </div>
-              {/* Loading bar */}
-              <div className="relative flex items-center w-full h-1 bg-[rgb(225,225,225,0.1)]">
-                <p
-                  className="text-[#45add9] absolute bottom-4"
-                  style={{
-                    animation: `numPos-${item.persentage} ${
-                      (item.persentage / 100) * 3
-                    }s ease-in-out`,
-                    left: `${ item.persentage - 0.5 }%`
-                  }}
-                >
-                  {item.persentage}%
-                </p>
-                {/* the line */}
-                <div
-                  className={` h-2 absolute `}
-                  style={{
-                    animation: `load-${item.persentage} ${
-                      (item.persentage / 100) * 3
-                    }s ease-in-out`,
-                    background:
-                      "linear-gradient(to right, transparent, #45add9)",
-                    width: `${item.persentage}%`,
-                  }}
-                ></div>
-                <style>
-                  {`
-                     @keyframes load-${item.persentage} {
-                        0% { width: 0; }
-                        100% { width: ${item.persentage}%; }
-                     }
-                     @keyframes numPos-${item.persentage} {
-                        0% { left: 0; opacity: 0; }
-                        100% { left: ${item.persentage - 0.5}%; opacity: 1; }
-                     }
-                      `}
-                </style>
-                {/* the line */}
-                {/* the dot */}
-                <div
-                  className="absolute h-4 w-4 rounded-full bg-[#45add9]"
-                  style={{
-                    animation: `position-${item.persentage} ${
-                      (item.persentage / 100) * 3
-                    }s ease-in-out`,
-                    left: ` ${item.persentage}% `,
-                  }}
-                ></div>
-                <style>
-                  {`
-                     @keyframes position-${item.persentage} {
-                        0% { left: 0; }
-                        100% { left: ${item.persentage}%; }
-                     }
-                      `}
-                </style>
-                {/* the dot */}
-              </div>
-            </div>
-          ))}
+import { skillsGroups } from "../constants";
+
+const LEVELS = {
+  core: "bg-[#45add9] shadow-[0_0_5px_rgba(69,173,217,0.7)] opacity-100",
+  mid: "bg-[#45add9] opacity-50",
+  exp: "bg-slate-500 opacity-40",
+} as const;
+
+const Skills = () => (
+  <section id="skills" className="py-8">
+    <div className="flex items-baseline gap-4 mb-10">
+      <h1
+        className="text-2xl font-bold text-primary italic"
+        style={{ fontFamily: "Georgia, serif" }}
+      >
+        Skills
+      </h1>
+      <div className="flex-1 h-px bg-[rgba(69,173,217,0.2)]" />
+    </div>
+
+    <div className="flex flex-col gap-8">
+      {skillsGroups.map((group, gi) => (
+        <div key={gi}>
+          <div className="flex items-center gap-3 mb-4">
+            <span className="w-[18px] h-px bg-[#45add9] flex-shrink-0" />
+            <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-secondary">
+              {group.categoryTitle}
+            </span>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {group.skills.map((item, si) => (
+              <SkillChip key={si} item={item} />
+            ))}
+          </div>
         </div>
+      ))}
+    </div>
+
+    <div className="flex gap-6 mt-8 pt-4 border-t border-white/5">
+      {[
+        {
+          cls: "bg-[#45add9] shadow-[0_0_4px_rgba(69,173,217,0.6)]",
+          label: "core stack",
+        },
+        { cls: "bg-[#45add9] opacity-50", label: "proficient" },
+        { cls: "bg-slate-500 opacity-40", label: "experienced" },
+      ].map(({ cls, label }) => (
+        <div key={label} className="flex items-center gap-1.5">
+          <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${cls}`} />
+          <span className="font-mono text-[11px] text-tertiary tracking-wide">
+            {label}
+          </span>
+        </div>
+      ))}
+    </div>
+  </section>
+);
+
+const SkillChip = ({ item }: { item: any }) => {
+  const level =
+    item.level ??
+    (item.persentage >= 85 ? "core" : item.persentage >= 70 ? "mid" : "exp");
+  return (
+    <div className="group flex items-center gap-2 px-3 py-1.5 rounded-full border border-[rgba(69,173,217,0.18)] bg-slate-900/60 hover:border-[rgba(69,173,217,0.5)] hover:bg-[rgba(69,173,217,0.07)] transition-all duration-200 cursor-default">
+      <div className="rounded-[5px] bg-[rgba(69,173,217,0.1)] flex items-center justify-center flex-shrink-0">
+        {typeof item.icon !== "string" ? (
+          <div className="w-[22px] h-[22px]">
+            <item.icon style={{ width: "14px", height: "14px" }} />
+          </div>
+        ) : (
+          <span className="px-1">{item.icon}</span>
+        )}
       </div>
-    </section>
+      <span className="font-mono text-[13px] text-primary">{item.title}</span>
+      <span
+        className={`w-[5px] h-[5px] rounded-full flex-shrink-0 ${
+          LEVELS[level as keyof typeof LEVELS]
+        }`}
+      />
+    </div>
   );
 };
 

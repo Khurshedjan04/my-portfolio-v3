@@ -5,7 +5,7 @@ import Skills from "./components/Skills";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-5 md:gap-7 lg:gap-12 text-secondary">
+    <div className="flex flex-col text-secondary">
       <About/>
       <Skills/>
       <Projects/>
