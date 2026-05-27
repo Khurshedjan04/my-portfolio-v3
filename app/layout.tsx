@@ -3,56 +3,61 @@ import "./globals.css";
 import Sidebar from "./components/Sidebar";
 import CursorEffects from "./components/CursorEffects";
 import Bubble from "./components/Bubble";
+
 export const metadata: Metadata = {
-  title: "Xurshed's portfolio",
+  title: {
+    default: "Xurshed Alimmamadov — Software Engineer",
+    template: "%s | Xurshed Alimmamadov",
+  },
   description:
-    "Welcome to my portflio, Explore a collection of my web development projects, showcasing my skills in front-end technologies.",
+    "Software Engineer and Full-Stack Developer specializing in backend systems, C#, .NET, Node.js, and modern web technologies. Based in Tashkent, Uzbekistan.",
+  keywords: [
+    "Xurshed Alimmamadov",
+    "Xurshid Alimmamadov",
+    "software engineer Tashkent",
+    "full-stack developer Uzbekistan",
+    "C# developer",
+    ".NET developer",
+    "Node.js developer",
+    "backend engineer",
+    "PDP University",
+    "React developer",
+    "Next.js developer",
+    "web developer portfolio",
+  ],
+  authors: [{ name: "Xurshed Alimmamadov" }],
+  creator: "Xurshed Alimmamadov",
   icons: {
     icon: "/logo.svg",
   },
-  keywords: [
-    "portfolio",
-    "Xurshed",
-    "Xurshid",
-    "Alimmamadov",
-    "Alimamadov",
-    "web developer Xurshed",
-    "web developer Xurshid",
-    "Xurshed Alimmamadov",
-    "Xurshed Alimamadov",
-    "Xurshid Alimmamadov",
-    "Xurshid Alimamadov",
-    "web development",
-    "front-end",
-    "React",
-    "Next.js,",
-    "Tailwind",
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "Python",
-    "PDP university",
-    "PDP university student",
-    "PDP university Xurshed",
-    "PDP university Xurshid",
-  ],
+  metadataBase: new URL("https://my-portfolio-v3.vercel.app"), // ← update to your v3 URL
   openGraph: {
-    title: "Xurshed's Portfolio",
+    title: "Xurshed Alimmamadov — Software Engineer",
     description:
-      "Explore a collection of web development projects showcasing skills in React, JavaScript, and modern front-end technologies.",
-    url: "https://my-portfolio-v2--seven.vercel.app",
-    siteName: "Xurshed's Portfolio",
+      "Software Engineer specializing in backend systems, C#, .NET, and full-stack development. Explore my projects and experience.",
+    url: "https://my-portfolio-v3.vercel.app", // ← update to your v3 URL
+    siteName: "Xurshed Alimmamadov",
     images: [
       {
-        url: "/logo.svg",
+        url: "/og-image.png", // ← use a real PNG, not SVG — most crawlers reject SVG og images
         width: 1200,
         height: 630,
-        alt: "Portfolio Thumbnail",
+        alt: "Xurshed Alimmamadov — Software Engineer Portfolio",
       },
     ],
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Xurshed Alimmamadov — Software Engineer",
+    description:
+      "Software Engineer specializing in backend systems, C#, .NET, and full-stack development.",
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -68,8 +73,8 @@ export default function RootLayout({
         <Bubble />
         <div className="max-w-screen-xl mx-auto">
           <div
-            className="w-full flex flex-col  gap-16 px-6 py-12
-            md:px-12 md:py-16 lg:py-0 lg:flex-row lg:justify-between lg:gap:4"
+            className="w-full flex flex-col gap-16 px-6 py-12
+            md:px-12 md:py-16 lg:py-0 lg:flex-row lg:justify-between lg:gap-4"
           >
             <Sidebar />
             <main className="flex-1">{children}</main>
