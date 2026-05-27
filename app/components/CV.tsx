@@ -65,7 +65,7 @@ const CV = () => {
               group-hover:text-primary transition-colors duration-200">
               Skip the abstractions. Take a look at my CV to analyze my
               technical execution and structural logic — a full picture of
-              where I've been and what I've built.
+              where I&apos;ve been and what I&apos;ve built.
             </p>
 
             {/* Meta pills */}

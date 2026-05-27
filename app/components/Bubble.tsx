@@ -62,7 +62,7 @@ const Bubble = () => {
       hue: number;
     };
 
-    let inks: Ink[] = [],
+    const inks: Ink[] = [],
       sparks: Spark[] = [],
       trail: Trail[] = [];
 
@@ -158,9 +158,10 @@ const Bubble = () => {
 
       // depth glow under cursor — smaller, much more subtle
       const bg = ctx.createRadialGradient(mx, my, 0, mx, my, 80);
-      bg.addColorStop(0, 'rgba(10,28,55,0.08)');
-      bg.addColorStop(1, 'rgba(0,0,0,0)');
-      ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
+      bg.addColorStop(0, "rgba(10,28,55,0.08)");
+      bg.addColorStop(1, "rgba(0,0,0,0)");
+      ctx.fillStyle = bg;
+      ctx.fillRect(0, 0, W, H);
 
       // current lines — lower alpha ceiling
       for (const l of lines) {
@@ -173,7 +174,11 @@ const Bubble = () => {
         for (let s = 0; s < l.len; s += 3) {
           const px = l.x + s,
             py = l.y + Math.sin(px * l.freq + t + l.offset) * l.amp;
-          s === 0 ? ctx.moveTo(px, py) : ctx.lineTo(px, py);
+          if (s === 0) {
+            ctx.moveTo(px, py);
+          } else {
+            ctx.lineTo(px, py);
+          }
         }
         ctx.strokeStyle = `rgba(69,173,217,${l.alpha * 0.45})`;
         ctx.lineWidth = l.thickness * 0.7;
@@ -250,21 +255,6 @@ const Bubble = () => {
         ctx.fillStyle = ig;
         ctx.fill();
       }
-
-      // trail
-      // for (let i = 1; i < trail.length; i++) {
-      //   trail[i].life -= 0.035;
-      //   if (trail[i].life < 0) trail[i].life = 0;
-      //   const prog = i / trail.length;
-      //   ctx.beginPath();
-      //   ctx.moveTo(trail[i - 1].x, trail[i - 1].y);
-      //   ctx.lineTo(trail[i].x, trail[i].y);
-      //   ctx.strokeStyle = `hsla(200,70%,68%,${trail[i].life * prog * 0.5})`;
-      //   ctx.lineWidth = prog * 2.5;
-      //   ctx.lineCap = "round";
-      //   ctx.stroke();
-      // }
-      // trail = trail.filter((p) => p.life > 0);
 
       // sparks
       for (let i = sparks.length - 1; i >= 0; i--) {

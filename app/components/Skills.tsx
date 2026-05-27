@@ -1,4 +1,4 @@
-import { skillsGroups } from "../constants";
+import { SkillItem, skillsGroups } from "../constants";
 
 const LEVELS = {
   core: "bg-[#45add9] shadow-[0_0_5px_rgba(69,173,217,0.7)] opacity-100",
@@ -55,8 +55,7 @@ const Skills = () => (
     </div>
   </section>
 );
-
-const SkillChip = ({ item }: { item: any }) => {
+const SkillChip = ({ item }: { item: SkillItem }) => {
   const level =
     item.level ??
     (item.persentage >= 85 ? "core" : item.persentage >= 70 ? "mid" : "exp");

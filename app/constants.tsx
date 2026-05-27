@@ -22,8 +22,9 @@ import MongoDB from "./svg/MongoDb";
 import CICD from "./svg/CICD";
 import Cloud from "./svg/Cloud";
 import LeetCodeIcon from "./svg/LeetCode";
+import { ElementType } from "react";
 
-const mainItems: { name: string; title: string } = {
+const mainItems: { name: string; title: string; description?: string } = {
   name: "Xurshed Alimmamadov",
   title: "Software Engineer",
 };
@@ -46,7 +47,7 @@ const navigationItems = [
   },
 ];
 interface SocialItems {
-  icon: any;
+  icon: ElementType;
   link: string;
 }
 const socialItems: SocialItems[] = [
@@ -76,11 +77,12 @@ const socialItems: SocialItems[] = [
   },
 ];
 
-interface SkillItem {
-  icon: any;
+export type SkillItem = {
   title: string;
+  icon: ElementType | string;
   persentage: number;
-}
+  level?: "core" | "mid" | "exp";
+};
 
 interface SkillGroup {
   categoryTitle: string;
