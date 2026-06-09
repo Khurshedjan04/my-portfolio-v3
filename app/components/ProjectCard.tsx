@@ -35,13 +35,15 @@ const ProjectCard = ({ item }: { item: ProjectItem }) => {
         type="button"
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
-        className="w-full text-left px-5 py-4 cursor-pointer"
+        aria-label={`${open ? "Collapse" : "Expand"} ${item.title} details`}
+        className="w-full text-left px-5 py-4 cursor-pointer rounded-xl
+          focus:outline-none focus-visible:ring-2 focus-visible:ring-[#45add9]/50"
       >
         <div className="flex gap-5 items-start">
           <div className="flex-shrink-0 w-[110px] flex flex-col gap-2">
             <Image
               src={item.imgSrc}
-              alt={item.title}
+              alt={`${item.title} screenshot`}
               width={500}
               height={500}
               className={imgClass}
@@ -49,7 +51,7 @@ const ProjectCard = ({ item }: { item: ProjectItem }) => {
             {item.imgSrc2 && (
               <Image
                 src={item.imgSrc2}
-                alt={item.title}
+                alt={`${item.title} secondary screenshot`}
                 width={500}
                 height={500}
                 className={imgClass}
