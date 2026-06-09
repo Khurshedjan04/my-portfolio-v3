@@ -61,13 +61,15 @@ const SkillChip = ({ item }: { item: SkillItem }) => {
     (item.persentage >= 85 ? "core" : item.persentage >= 70 ? "mid" : "exp");
   return (
     <div className="group flex items-center gap-2 px-3 py-1.5 rounded-full border border-[rgba(69,173,217,0.18)] bg-slate-900/60 hover:border-[rgba(69,173,217,0.5)] hover:bg-[rgba(69,173,217,0.07)] transition-all duration-200 cursor-default">
-      <div className="rounded-[5px] bg-[rgba(69,173,217,0.1)] flex items-center justify-center flex-shrink-0">
+      <div className="flex items-center justify-center flex-shrink-0">
         {typeof item.icon !== "string" ? (
           <div className="w-[22px] h-[22px]">
             <item.icon style={{ width: "14px", height: "14px" }} />
           </div>
         ) : (
-          <span className="px-1">{item.icon}</span>
+          <span className={`px-1 bg-[#e2e8f0] text-tertiary rounded-[15px]`}>
+          {item.icon}
+        </span>
         )}
       </div>
       <span className="font-mono text-[13px] text-primary">{item.title}</span>

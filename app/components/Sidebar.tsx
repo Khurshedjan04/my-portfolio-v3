@@ -51,7 +51,7 @@ const Sidebar = () => {
           {socialItems.map((item, index) => (
             <li
               key={index}
-              className="cursor-pointer transition-all supports-hover:hover:text-primary  lg:w-[30px] lg:h-[30px] text-2xl lg:text-3xl"
+              className="cursor-pointer transition-all supports-hover:hover:text-primary lg:w-[30px] lg:h-[30px] text-2xl lg:text-3xl"
             >
               <a href={item.link} target="_blank">
                 {" "}
