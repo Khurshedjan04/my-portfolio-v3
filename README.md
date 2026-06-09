@@ -1,9 +1,6 @@
 # Xurshed Alimmamadov — Portfolio (v3)
 
-My personal developer portfolio. Single-page site with an About, Skills,
-Projects and CV section, a custom cursor/bubble effect, and expandable
-project cards that break each project down by discipline (Frontend, Backend,
-Database, Architecture, DevOps, …).
+My personal developer portfolio.
 
 🔗 **Live:** https://alimmamadov.dev
 
