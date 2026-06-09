@@ -28,18 +28,18 @@ export const metadata: Metadata = {
   authors: [{ name: "Xurshed Alimmamadov" }],
   creator: "Xurshed Alimmamadov",
   icons: {
-    icon: "/logo.svg",
+    icon: "/og-image.png",
   },
-  metadataBase: new URL("https://my-portfolio-v3.vercel.app"), // ← update to your v3 URL
+  metadataBase: new URL("https://my-portfolio-v3.vercel.app"), 
   openGraph: {
     title: "Xurshed Alimmamadov — Software Engineer",
     description:
       "Software Engineer specializing in backend systems, C#, .NET, and full-stack development. Explore my projects and experience.",
-    url: "https://my-portfolio-v3.vercel.app", // ← update to your v3 URL
+    url: "https://my-portfolio-v3.vercel.app", 
     siteName: "Xurshed Alimmamadov",
     images: [
       {
-        url: "/og-image.png", // ← use a real PNG, not SVG — most crawlers reject SVG og images
+        url: "/og-image.png", 
         width: 1200,
         height: 630,
         alt: "Xurshed Alimmamadov — Software Engineer Portfolio",
