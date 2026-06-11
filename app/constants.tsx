@@ -150,7 +150,7 @@ const skillsGroups: SkillGroup[] = [
       },
       {
         icon: MySQL,
-        title: "MySQl",
+        title: "MySQL",
         persentage: 78,
       },
       {
@@ -246,7 +246,6 @@ export interface ProjectItem {
   tags: string[];
   stack: ProjectStackGroup[];
   links: ProjectLink[];
-  isDBInactive?: boolean;
 }
 
 const projectsItems: ProjectItem[] = [
@@ -361,7 +360,6 @@ const projectsItems: ProjectItem[] = [
       { label: "Admin Code", url: "https://github.com/Khurshedjan04/TechSupportApp---Admin", kind: "code" },
       { label: "Backend Code", url: "https://github.com/Khurshedjan04/TechSupport---Backend", kind: "code" },
     ],
-    isDBInactive: true, // MongoDB Atlas free tier cluster went inactive due to inactivity, but backend and frontends are still fully functional with mocked data
   },
   {
     imgSrc: "/assets/workhub.png",

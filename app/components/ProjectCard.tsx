@@ -96,7 +96,7 @@ const ProjectCard = ({ item }: { item: ProjectItem }) => {
                 group-hover:text-primary transition-colors duration-200
                 ${open ? "" : "line-clamp-2"}`}
             >
-              {item.description} {item.isDBInactive && <span className="text-secondary">[MongoDB Atlas free tier cluster went inactive due to inactivity]</span>}
+              {item.description}
             </p>
           </div>
         </div>

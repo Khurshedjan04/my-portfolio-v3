@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | Xurshed Alimmamadov",
   },
   description:
-    "Software Engineer and Full-Stack Developer specializing in backend systems, C#, .NET, Node.js, and modern web technologies. Based in Tashkent, Uzbekistan.",
+    "Software Engineer and Full-Stack Developer specializing in backend systems, C#, .NET, Node.js, and modern web techno`log`ies. Based in Tashkent, Uzbekistan.",
   keywords: [
     "Xurshed Alimmamadov",
     "Xurshid Alimmamadov",
@@ -30,12 +30,12 @@ export const metadata: Metadata = {
   icons: {
     icon: "/og-image.png",
   },
-  metadataBase: new URL("https://my-portfolio-v3.vercel.app"), 
+  metadataBase: new URL("https://alimmamadov.dev"), 
   openGraph: {
     title: "Xurshed Alimmamadov — Software Engineer",
     description:
       "Software Engineer specializing in backend systems, C#, .NET, and full-stack development. Explore my projects and experience.",
-    url: "https://my-portfolio-v3.vercel.app", 
+    url: "https://alimmamadov.dev", 
     siteName: "Xurshed Alimmamadov",
     images: [
       {

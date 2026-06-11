@@ -25,7 +25,7 @@ const About = () => {
       </div>
 
       <h1 className="text-[22px] leading-[1.55] text-primary font-normal mb-8">
-        <em className="italic text-[#45add9]">systems</em> —
+        <em className="italic text-[#45add9]"> building software</em> —
         {/* <br className="hidden sm:block" /> */}
         from backend internals to architectural boundaries.
       </h1>
